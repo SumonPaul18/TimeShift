@@ -1,0 +1,34 @@
+
+#What is Timeshift?
+Timeshift is a great tool, which monitors your system & application-level changes and gives you the ability to roll back your system in the previous state, in case, you run into a problem (Similar like Windows restore point).
+
+#Install TimeShift in Ubuntu:
+
+apt-add-repository -y ppa:teejee2008/ppa
+sudo apt update 
+sudo apt install timeshift -y
+
+#Creating a Restore point:
+
+timeshift --create --comments "A new backup" --tags D
+
+#instruction:
+--tags D
+There are several tags, that specify what kind of backup it is.
+As an example
+
+--tags D stands for Daily Backup
+--tags W stands for Weekly Backup
+--tags M stands for Monthly Backup
+--tags O stands for On-demand Backup
+
+#Restoring a snapshot:
+
+timeshift --restore
+
+
+
+
+
+
+
